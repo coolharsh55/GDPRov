@@ -1,0 +1,29 @@
+GDPRov
+Class
+gdprov:ConsentAgreementTemplateBundle
+gdprov:ConsentAgreementBundle
+gdprov:ThirdCountry rdfs:subClassOf prov:Location
+Property
+gdprov:usesConsentAgreementTemplateBundle
+	domain:ConsentStep
+	range:ConsentAgreementTemplateBundle
+gdprov:generatesConsentAgreementBundle
+	domain:ConsentStep
+	range:ConsentAgreementBundle
+gdprov:hasStep
+	domain:Process
+	range:Step
+gdprov:hasWithdrawalStep
+	domain:ConsentAgreementTemplate or :ConsentAgreement
+	range:ConsentWithdrawalStep
+gdprov:hasStorageTime
+	domain:DataStorageStep
+	range:time:Instant or time:Duration
+gdprov:hasDataTransferSafeguard
+	domain:DataSharingStep
+
+
+GConsent
+gconsent:withdrawBy
+	domain:Consent
+	subPropertyOf: gconsent:changeBy
